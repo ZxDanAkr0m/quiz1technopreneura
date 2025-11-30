@@ -1,0 +1,160 @@
+/* Fonts + basics */
+body {
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  background: white;
+  color: #4a2e25;
+}
+
+/* Header */
+header {
+  padding: 12px;
+  background: #b8d8ba;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .brand {
+  font-family: 'Playfair Display SC', serif;
+  text-decoration: none;
+  color: #4a2e25;
+}
+header nav a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: #4a2e25;
+}
+
+/* Hero */
+#hero {
+  background: linear-gradient(rgba(74,46,37,0.45),rgba(74,46,37,0.45)),
+    url('https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=1400&auto=format&fit=crop') center/cover;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  filter: sepia(40%) saturate(120%) brightness(90%);
+   min-height: 100vh;
+}
+.hero-text h1 {
+  font-family: 'Playfair Display SC', serif;
+  color: #fff;
+  margin: 0;
+  font-size: 4rem;
+}
+.hero-text p {
+  color: #fff;
+}
+
+/* Menu */
+#menu {
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+   min-height: 120vh;
+}
+.menu-grid {
+    display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 columns */
+  gap: 20px; /* spacing between boxes */
+  max-width: 1200px;
+  margin: 0 auto; 
+}
+.menu-box {
+  position: relative;              /* lets ::after position itself inside */
+  background: #fff8ee;
+  border: 2px solid #7b4b3a;
+  border-radius: 12px;
+  padding: 20px;
+  overflow: hidden;                /* ensures watermark won’t spill outside */
+}
+
+.menu-box::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;                    /* adjust how far from bottom */
+  left: 10px;                      /* adjust how far from left */
+  width: 50px;                     /* size of the watermark */
+  height: 50px;
+  background: url("https://static.vecteezy.com/system/resources/previews/044/448/707/non_2x/collection-of-simple-coffee-cup-logo-designs-isolated-free-png.png") no-repeat center/contain;
+  opacity: 0.15;                   /* faint so text stays readable */
+  pointer-events: none;            /* ensures it won’t block clicks */
+}
+
+.menu-box h2 {
+  font-family: 'Playfair Display SC', serif;
+  color: #7b4b3a;
+  margin-top: 0;
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+.price {
+  color: #d9534f;
+}
+.symbol {
+  position: absolute;
+  bottom: 10px;  
+  left: 10px;    
+  font-size: 50px;
+  color: #7b4b3a;
+  opacity: 0.7;  
+}
+
+/* Contact */
+#contact {
+  padding: 20px;
+  background: #b8d8ba;
+}
+#contact h2 {
+  font-family: 'Playfair Display SC', serif;
+}
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#contact input,
+#contact textarea {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+}
+#contact button {
+  background: #7b4b3a;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  padding: 10px;
+  background: #4a2e25;
+  color: white;
+  text-align: center;
+}
+#button,
+.btn {
+  display: inline-block;
+  background: #7b4b3a;   
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn:hover {
+  background: #603c30; 
+  transform: scale(0.95);
+}
+html {
+  scroll-behavior: smooth;
+}

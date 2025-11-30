@@ -1,0 +1,103 @@
+// made by chatgpt not gonna lie
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Celadon & Cocoa — Styled</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Playfair+Display+SC:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+  // Check if the user is logged in
+  if (sessionStorage.getItem('isLoggedIn') !== 'true') {
+    // If not, redirect them back to the login page immediately
+    window.location.href = 'login.html';
+  }
+</script>
+</head>
+<body>
+
+  <header>
+    <a class="brand" href="#">CELADON & COCOA</a>
+    <nav>
+  <a href="#menu" class="btn">Menu</a>
+  <a href="#contact" class="btn">Contact</a>
+  <a href="#" class="btn" id="logoutBtn" style="background-color: #d9534f;">Logout</a>
+</nav>
+  </header>
+
+  <section id="hero">
+    <div class="hero-text">
+      <h1>Warm beans. Calm vibes.</h1>
+      <p>Milk-chocolate notes, celadon cups, croissants.</p>
+    </div>
+  </section>
+
+  <section id="menu">
+    <div class="menu-grid">
+    
+      <div class="menu-box">
+        <h2>COFFEE</h2>
+        <div class="item"><span>Vanilla Latte</span><span class="price">$3</span></div>
+        <div class="item"><span>Choco Latte</span><span class="price">$2.2</span></div>
+        <div class="item"><span>Matcha Latte</span><span class="price">$2.2</span></div>
+        <div class="item"><span>Cappucino</span><span class="price">$4</span></div>
+        <div class="item"><span>Brown Sugar Cappucino</span><span class="price">$5</span></div>
+        <div class="item"><span>Con Panna</span><span class="price">$6</span></div>
+        <div class="item"><span>Mocha Hazelnut</span><span class="price">$6</span></div>
+        <div class="item"><span>Americano</span><span class="price">$9</span></div>
+        <div class="item"><span></span></div>
+
+    </div>
+
+    <div class="menu-box">
+        <h2>FOOD</h2>
+        <div class="item"><span>Ham and Cheese Sandwich</span><span class="price">$10</span></div>
+        <div class="item"><span>Tuna Sandwich</span><span class="price">$9</span></div>
+        <div class="item"><span>Eggs with Bacon and Avocado</span><span class="price">$12</span></div>
+    </div>
+
+     <div class="menu-box">
+        <h2>DESSERT</h2>
+        <div class="item"><span>Chocolate Cake</span><span class="price">$7</span></div>
+        <div class="item"><span>Cheesecake</span><span class="price">$9</span></div>
+    </div>
+
+     <div class="menu-box">
+        <h2>DRINKS</h2>
+       <div class="item"><span>Fresh Juice</span><span class="price">$5</span></div>
+       <div class="item"><span>Tea</span><span class="price">$4</span></div>
+    </div>
+
+  </section>
+
+  <section id="contact">
+    <h2>Reserve</h2>
+    <p><strong>Address:</strong> 123 Brew Lane</p>
+    <p><strong>Hours:</strong> Mon–Fri 7:00–19:00</p>
+    <form>
+      <input placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <textarea rows="4" placeholder="Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <small>© <span id="yr"></span> Celadon & Cocoa</small>
+  </footer>
+<script>
+  // Logout Logic
+  document.getElementById('logoutBtn').addEventListener('click', function(e) {
+    e.preventDefault();
+    // Remove the logged-in flag
+    sessionStorage.removeItem('isLoggedIn');
+    // Send them back to login
+    window.location.href = 'login.html';
+  });
+
+  // Auto-update copyright year (already in your footer logic)
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Login — Celadon & Cocoa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Playfair+Display+SC:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Basic Reset & Fonts matching your style.css */
+    body {
+      font-family: 'Playfair Display', serif;
+      margin: 0;
+      background: #b8d8ba; /* Header color from your site */
+      color: #4a2e25;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Login Container */
+    .login-box {
+      background: #fff8ee; /* Menu box background color */
+      border: 2px solid #7b4b3a;
+      border-radius: 12px;
+      padding: 40px;
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(74, 46, 37, 0.2);
+    }
+
+    .login-box h1 {
+      font-family: 'Playfair Display SC', serif;
+      color: #7b4b3a;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    /* Form Elements */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input {
+      padding: 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+
+    button {
+      background: #7b4b3a;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+      font-family: 'Playfair Display SC', serif;
+    }
+
+    button:hover {
+      background: #603c30;
+    }
+
+    .error-msg {
+      color: #d9534f; /* Price color from your CSS for errors */
+      margin-top: 10px;
+      font-size: 0.9rem;
+      display: none; /* Hidden by default */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-box">
+    <h1>Member Login</h1>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Enter Cafe</button>
+    </form>
+    <p class="error-msg" id="errorMsg">Invalid Credentials</p>
+  </div>
+
+  <script src="loginscript.js"></script>
+
+</body>
+</html>
